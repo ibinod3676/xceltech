@@ -10,6 +10,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SignupComponent } from './signup/signup.component';
 
 
+const appRoutes: Routes = [
+  {
+path: 'signup', component: SignupComponent},
+{ path: '', redirectTo: '/signup', pathMatch: 'full'}
+
+
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +27,8 @@ import { SignupComponent } from './signup/signup.component';
     SignupComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
