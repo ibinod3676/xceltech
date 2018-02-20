@@ -8,13 +8,13 @@
 .main{
 
   display:grid;
-  grid-template-columns: 1fr 500px 500px 1fr;
-  grid-template-rows: 1fr 1fr 500px 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px 1fr 1fr 70px;
   grid-template-areas:
-  " . navbar navbar ."
+  " navbar navbar navbar navbar"
   " sidebar content content ."
   "sidebar content content ."
-  ". footer footer ." ;
+  "footer footer footer ." ;
 }
 
 .navbar
@@ -23,6 +23,7 @@ grid-area: navbar;
 margin: 5px;
 padding: 20px;
 background-color: rgb(202, 173, 40);
+
 }
 .sidebar{
   grid-area: sidebar;
@@ -38,7 +39,7 @@ background-color: rgb(202, 173, 40);
 
 .footer{
   grid-area: footer;
-  background-color: blue
+  background-color: rgb(92, 177, 137)
   }
 
 .grid div:nth-child(even)
