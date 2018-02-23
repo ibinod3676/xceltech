@@ -9,20 +9,20 @@
 
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 150px 1fr 1fr 70px;
+  grid-template-rows: 100px 1fr 1fr 70px;
   grid-template-areas:
   " navbar navbar navbar navbar"
   " sidebar content content ."
-  "sidebar content content ."
-  "footer footer footer ." ;
+  " sidebar content content ."
+  " footer footer footer footer" ;
 }
 
 .navbar
 {
 grid-area: navbar;
-margin: 5px;
-padding: 20px;
-background-color: rgb(202, 173, 40);
+margin: 0px;
+padding: 0px;
+background-color: rgb(40, 202, 140);
 
 }
 .sidebar{
@@ -34,12 +34,14 @@ background-color: rgb(202, 173, 40);
 .content{
   grid-area: content;
   -ms-grid-row-align: start;
-  background-color: rgb(215, 250, 244)
+  background-color: rgb(215, 250, 244);
+  padding-block-start: 5%;
   }
 
 .footer{
   grid-area: footer;
-  background-color: rgb(92, 177, 137)
+  background-color: rgb(92, 177, 137);
+  padding-block-start: -9%;
   }
 
 .grid div:nth-child(even)
